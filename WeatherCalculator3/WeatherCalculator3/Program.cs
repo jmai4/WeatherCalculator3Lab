@@ -16,13 +16,13 @@ namespace WeatherCalculator3
             string input = "";
             bool quit = true;
 
-            while (quit)
+            while (quit==true)
             {
                 // Get the temperature from the user
                 Console.WriteLine("Enter the temperature");
 
                 // convert "input" string variable  to an integer and store in "temperature" variables
-                temperature = int.Parse(input);
+                temperature = int.Parse(Console.ReadLine());
 
                 if (temperature > 50)
                 {
@@ -65,11 +65,15 @@ namespace WeatherCalculator3
 
                 if (input=="no")
                 {
+                    quit = true;
+                }
+                else
+                {
                     quit = false;
+                    //Tell the user the program is ending
+                    Console.WriteLine("Program has ended...Thank you!");
                 }
                
-                //Tell the user the program is ending
-                Console.WriteLine("Program has ended...Thank you!");
                
                 
                 
